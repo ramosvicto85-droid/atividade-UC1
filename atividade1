@@ -1,0 +1,33 @@
+print("========= Entrega e Delivery =========")
+
+class delivery:
+    def __init__(self, produto, valor, estoque):
+        self.produto = produto
+        self.valor = valor
+        self.estoque = estoque
+
+    def dados(self):
+        print("Produto:", self.produto)
+        print("valor: R$", self.valor)
+        print("Quantedade pronta:", self.estoque)
+
+    def venda(self, quantidade):
+        if quantidade > 0 and quantidade <= self.estoque:
+            self.estoque -= quantidade
+            print("Pedido Feito!")
+            print("Em preparo...")
+            print("Entregue!")
+        else:
+            print("Sem estoque")
+
+produto1 = delivery("Pizza", 30, 5)
+produto2 = delivery("Hanbúrguer", 20, 2) 
+
+produto1.dados()
+produto2.dados()
+produto1.venda(2)
+produto2.venda(3)
+produto1.dados()
+produto2.dados()
+
+#nomes: victor júnior, manoel bezerra neto, francinalva rodrigues
